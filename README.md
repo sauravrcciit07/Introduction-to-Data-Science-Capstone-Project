@@ -1,1 +1,12 @@
 # Introduction-to-Data-Science-Capstone-Project
+### Introduction
+This projects aims to test a given hypothesis with the help of some datasets. Python is used as the programming language in this project and python libraries like NumPy, Pandas, SciPy are used to read, manipulate,analyze and perform calculations on the data. Main challenge of this project lies in reading the data properly from the datasets and manipulate the data to obtain only the required and necessary data in a particular format.   
+### Explanation
+**Hypothesis** *University towns have their mean housing prices less effected by recessions.*   
+**Datasets** The datasets that are used   
+>1. From the Wikipedia page on college towns a list of university towns in the United States has been copied and pasted into the file named  ```university_towns.txt.```   
+>2. From the [Zillow research data site](http://www.zillow.com/research/data/) there is housing data for the United States. In particular the datafile for [all homes at a city level](http://files.zillowstatic.com/research/public/City/City_Zhvi_AllHomes.csv), named as ```City_Zhvi_AllHomes.csv```, has median home sale prices at a fine grained level.
+>3. From Bureau of Economic Analysis, US Department of Commerce, the [GDP over time](http://www.bea.gov/national/index.htm#gdp) of the United States in current dollars, in quarterly intervals, named as  ```gdplev.xls```.
+
+**Handling the datasets**   
+The dataset caontaining University town names (```university_towns.txt.```) in text format was read using pandas and the unwanted trailing charcters and whitespaces were removed to obtain a dataframe having the name of University towns in one column and their corresponding name of state in the other column. From the dataset containing quarterly GDP values (```gdplev.xls```) of the USA ,  recession start, recession bottom and recession end between 2000 and 2015 was identified by writing three explicit functions for each. Lastly from the dataset containing monthly house prices (```City_Zhvi_AllHomes.csv```) of different regions in USA was read, for all the regions of USA the monthly house prices starting from 2000 January to 2015 December was converted into quarterly house prices by taking their average. Finally a dataframe was formed containg name of each region of different states in rows (hierarchically indexed) and their corresponding quarterly house price for each quater starting from 2000 to 2015.   
